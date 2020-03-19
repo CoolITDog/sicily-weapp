@@ -1,0 +1,19 @@
+<!--packagePersonal/pages/login/login.wxml-->
+<view class="block flex-wrp" style="flex-direction:column;">
+  <view class="img">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </view>
+  </view>
+   <view class='group '>
+    <view class='item'>
+      <view class='label'>账号：</view>
+      <input placeholder='请输入' bindinput='bindinput' placeholder-class='input-color' data-name='account' value='{{account}}' maxlength='17' style='flex:0.8;'></input>
+    </view>
+    <view class='item'>
+      <view class='label'>密码：</view>
+      <input password="{{true}}" placeholder='请输入' bindinput='bindinput' placeholder-class='input-color' data-name='password' value='{{password}}' maxlength='17' style='flex:0.8;'></input>
+    </view>
+  </view>
+   <view class='btn' bindtap="merchantVerify" style='margin-bottom:{{id?"20rpx":"40rpx"}}'>身份验证</view>
+</view>

@@ -1,0 +1,19 @@
+<!--packagePersonal/pages/index/index.wxml-->
+<view class="block">
+  <view class="img">
+    <!-- <image src="../../resources/defaultBg.png"></image> -->
+    <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  </view>
+</view>
+<view class="container">
+  <view class="couponUseBtn" catchtap="merchantLogin">店家入口</view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

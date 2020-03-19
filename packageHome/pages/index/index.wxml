@@ -1,0 +1,30 @@
+<!--packageHome/pages/index/index.wxml-->
+<!-- <text>packageHome/pages/index/index.wxml</text> -->
+<view class="block">
+  <view class="img">
+    <image src="../../resources/defaultBg.png" style="height:140px; width:100%"></image>
+  </view>
+</view>
+<view>
+  <view class="category">
+  <view class="page-section">
+      <view class="page-section-spacing">
+        <scroll-view scroll-y="true" style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">      
+        <view wx:for='{{categoryList}}'  wx:for-index="idx" wx:key="index" wx:for-item="item">
+          <view class="scroll-view-item">{{item.name}}</view>
+        </view>
+        </scroll-view>
+      </view>
+  </view>
+</view>
+<view class="food">
+  <scroll-view scroll-y="true" style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view wx:for='{{foodList1}}' wx:for-index='idx' wx:key="index" wx:for-item="item">
+      <image src="{{item.image}}"></image>
+      <view class="food-view-item">
+
+      </view>
+    </view>
+  </scroll-view>
+</view>
+</view>

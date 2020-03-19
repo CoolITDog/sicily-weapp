@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "packageHome/pages/index/index",
+    "pages/index/index",
+    "pages/logs/logs",
+    "packagePersonal/pages/index/index",
+    "packagePersonal/pages/login/login",
+    "packagePersonal/pages/menu/menu"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Sicily",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "color": "#999999",
+    "selectedColor": "#3582EE",
+    "backgroundColor": "#FFFFFF",
+    "list":[
+      {
+        "pagePath": "packageHome/pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_active.png"
+      },
+      {
+        "pagePath": "packagePersonal/pages/index/index",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine_active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,64 @@
+/* packageHome/pages/index/index.wxss */
+.banner {
+  margin: 20rpx;
+  font-size: 28rpx;
+  padding: 36rpx 28rpx 38rpx 0;
+  background-color: #fff;
+  box-shadow: 0 4rpx 10rpx 0 rgba(51, 51, 51, 0.10);
+  border-radius: 8rpx;
+  position: relative;
+}
+
+.detailImg {
+  width: 100%;
+  height: 400rpx;
+  position: absolute;
+  top: 0;
+  z-index: -999;
+}
+.block{
+  margin: 20rpx;
+  padding: 40rpx 28rpx;
+  background: #fff;
+  box-shadow: 0 4rpx 10rpx 0 rgba(51, 51, 51, 0.10);
+  border-radius: 8rpx;
+  display: flex;
+}
+
+.block .img {
+  width: 100%;
+  height: 100%;
+  border-radius: 68rpx;
+}
+
+.page-section-spacing{
+  margin-top: 60rpx;
+}
+.scroll-view_H{
+  white-space: nowrap;
+}
+.scroll-view-item{
+  height: 80rpx;
+}
+.category{
+ width: 30%;
+ padding: 15px; 
+}
+.food {
+  position: relative;
+  float: right;
+  font-weight: normal;
+  color: rgb(58, 56, 56);
+  font-size: 24rpx;
+  margin-right: 15rpx;
+  transform: translateY(5rpx);
+}
+.food image{
+  width: 100rpx;
+  height: 100%;
+  float: left;
+
+}
+.food-view-item{
+  height: 150rpx;
+}

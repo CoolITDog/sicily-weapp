@@ -1,0 +1,38 @@
+<view class="page-section-spacing">
+  <view class='smartAlert flex-wrp' style="flex-direction:row;">
+      <view class='flex-item ' style='padding:0;'>品类</view>
+      <view class='flex-item ' bindtap='jumpCoupon'>新增</view>
+  </view>
+</view>
+
+  <view class='alertItem' wx:for='{{list}}' wx:key='*this' style='margin-top:{{index != 0 ?"20rpx":""}}'>
+
+  <view class='coupon clearfix coupon-bg' data-id="{{item.id}}" data-status='{{item.receiveStatus}}' bindtap='goDetail'>
+    <view class='couponLeft pull-left'>
+      <view class='couponMain'>
+        <view wx:if='{{item.discountType != 4}}' class='couponRebate in-block'>{{item.denomination}}</view>
+        <view wx:if='{{item.discountType == 4}}' class='discountType'>实物券</view>
+        <view class='couponName in-block'>{{(item.discountType == 1 || item.discountType == 3)?'元':item.discountType == 2?'折':''}}</view>
+        <view wx:if='{{item.discountType != 4}}' class='couponUseDescription'>{{item.useBarriers == 1?'无限制':'满'+ item.full +'元可用'}}</view>
+        <view wx:if='{{item.discountType == 4 && item.denomination != null}}' class='discountType_price' >价值{{item.denomination}}元</view>
+      </view>
+    </view>
+    <view class='couponRight pull-left'>
+      <view class='couponName'>{{item.couponName}}<text wx:if='{{item.amount>0}}'>({{item.amount}}张)</text></view>
+      <view class='couponType'>适用项目：{{item.couponType}}</view>
+      <view class='couponTime' wx:if='{{item.receiveStatus == 2}}'>有效期：{{item.receiveStartTime}}-{{item.receiveEndTime}}</view>
+      <view class='couponTime' wx:else>有效期：{{item.effectiveEndTime}}</view>
+
+      <!-- <view class='couponType' wx:else>
+        有效期：{{item.receiveEndTime}}
+      </view> -->
+      <view class='couponUseBtn {{type==2?"used":type==3?"outDate":""}}' wx:if='{{item.receiveStatus == 2 && showBtn}}'>
+        {{type==1?"去使用":type==2?"已使用":"已失效"}}
+      </view>
+      <!-- <view class="couponUseBtn-hide" wx:if='{{item.receiveStatus == 2 && showBtn}}' data-id="{{item.id}}" bindtap='touch' data-index='1'></view> -->
+      <view wx:if='{{item.receiveStatus == 1 && showBtn}}' class='couponUseBtn' data-id="{{item.id}}" data-activityid="{{item.activityId}}" catchtap='touch' data-index='2'>领取</view>
+      <!-- <view wx:if='{{item.receiveStatus == 1 && showBtn}}' class="couponUseBtn-hide" data-id="{{item.id}}" data-activityid="{{item.activityId}}" catchtap='touch' data-index='2'></view> -->
+    </view>
+  </view>
+</view>
+

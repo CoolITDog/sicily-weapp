@@ -1,0 +1,51 @@
+/* packagePersonal/pages/index/index.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.block{
+  margin: 20rpx;
+  padding: 40rpx 28rpx;
+  background: #fff;
+  box-shadow: 0 4rpx 10rpx 0 rgba(51, 51, 51, 0.10);
+  border-radius: 8rpx;
+  display: flex;
+}
+
+.block .img {
+  width: 100%;
+  height: 100%;
+  border-radius: 68rpx;
+}
+
+.couponUseBtn {
+  position: absolute;
+  right: 40rpx;
+  transform: translateY(-400%);
+  border: 2rpx solid #4ef9ff;
+  border-radius: 25rpx;
+  width: 116rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  text-align: center;
+  color: #4ef9ff;
+}
+

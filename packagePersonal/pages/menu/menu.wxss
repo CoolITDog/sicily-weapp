@@ -1,0 +1,186 @@
+
+/* 优惠券 */
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.pull-left {
+  float: left;
+}
+
+.tips {
+  text-align: center;
+  color: #999;
+  font-size: 28rpx;
+  margin: 30rpx 0;
+}
+
+.alertTips {
+  color: #999;
+  margin: 20rpx 0;
+  font-size: 24rpx;
+}
+
+.coupon {
+  font-size: 24rpx;
+  width: 670rpx;
+  height: 160rpx;
+  color: #fff;
+  box-shadow: 0 8rpx 12rpx 0 rgba(215, 215, 215, 0.5);
+}
+
+.lose .coupon {
+  -webkit-filter: grayscale(1);
+}
+
+.coupon .couponLeft {
+  width: 27%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.coupon .couponLeft .couponMain {
+  text-align: center;
+  padding: 20rpx 0;
+}
+
+.coupon .couponLeft .couponRebate {
+  font-size: 60rpx;
+  line-height: 84rpx;
+  letter-spacing: 0;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.coupon .couponLeft .discountType {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40rpx;
+  width: 100%;
+}
+.discountType_price{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 20rpx;
+  font-size: 20rpx;
+}
+.coupon .couponLeft .couponName {
+  font-size: 24rpx;
+  letter-spacing: 0;
+}
+
+.coupon .couponLeft .couponUseDescription {
+  font-size: 20rpx;
+}
+
+.m-l-14 {
+  margin-left: 14rpx;
+}
+
+.coupon .couponLeft .couponType {
+  letter-spacing: 0;
+  opacity: 0.8;
+  margin-top: 8rpx;
+}
+
+.coupon .couponLeft .couponLine {
+  width: 1rpx;
+  height: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 21rpx;
+  opacity: 0.5;
+  background-color: #fff;
+}
+
+.in-block {
+  display: inline-block;
+}
+
+.coupon .couponRight {
+  width: 73%;
+  height: 100%;
+  color: #333;
+  position: relative;
+  box-sizing: border-box;
+  padding: 16rpx 20rpx;
+}
+
+.coupon .couponRight .couponName {
+  font-size: 28rpx;
+  font-weight: bold;
+  line-height: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.coupon .couponRight .couponType, .coupon .couponRight .couponTime {
+  font-size: 24rpx;
+  color: #999;
+  line-height: 34rpx;
+}
+
+.coupon .couponRight .couponTime {
+  font-size: 20rpx;
+}
+
+.coupon .couponRight .couponUseBtn {
+  position: absolute;
+  top: 50%;
+  right: 40rpx;
+  transform: translateY(-50%);
+  border: 2rpx solid #ff634e;
+  border-radius: 25rpx;
+  width: 116rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  text-align: center;
+  color: #ff634e;
+}
+
+.coupon .couponRight .couponUseBtn-hide {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #096;
+  width: 156rpx;
+  height: 80rpx;
+  z-index: 9999;
+  opacity: 0;
+}
+
+.coupon .couponRight .used {
+  border-color: #333;
+  color: #333;
+}
+
+.coupon .couponRight .outDate {
+  border-color: #999;
+  color: #999;
+}
+
+.smartAlert {
+  padding: 40rpx;
+  font-size: 24rpx;
+  color: #333;
+  background-color: #fff;
+}
+
+.smartAlert .alertTitle, .intelliAssis .intelliAssisTitle {
+  padding: 40rpx;
+  font-size: 32rpx;
+  margin-bottom: 40rpx;
+  font-weight: bold;
+}
+
+.smartAlert .alertItem .alertTips {
+  color: #999;
+  margin: 20rpx 0;
+}
