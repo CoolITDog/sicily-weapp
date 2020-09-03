@@ -1,0 +1,35 @@
+<view class='cell-box'>
+	<block wx:if='{{type=="picker"}}'>
+		<picker range='{{pickerData}}' disabled="{{disabled}}" value='{{pickerValue}}' bindchange='change' range-key='name' mode='multiSelector' bindcolumnchange='bindcolumnchange'>
+			<view class='cell {{inputAlign=="right"?"inputRight":"inputLeft"}}'>
+				<view class='label {{required?"required":""}}' wx:if='{{label}}'>{{label}}</view>
+				<view class='value {{value?"":"no-value"}}'>
+					{{value ||'请选择'}}
+					<image wx:if='{{!hideArrow}}' class='arrow' src="./images/arrow.png"></image>
+				</view>
+			</view>
+		</picker>
+	</block>
+	<block wx:else>
+		<view class='cell {{inputAlign=="right"?"inputRight":"inputLeft"}} {{!label?"left":""}}' bindtap="click">
+			<view class='label {{required?"required":""}} {{labelSelf}}' wx:if='{{label}}'>{{label}}</view>
+			<block wx:if='{{type=="input"}}'>
+				<input class='input' type='{{inputType}}' focus="{{focus}}" bindblur="blur" placeholder="{{placeholder}}" disabled="{{disabled}}" bindinput="input" placeholder-class="no-value" maxlength="{{maxlength}}" value='{{value}}'></input>
+			</block>
+			<block wx:elif='{{type=="slot"}}'>
+				<slot></slot>
+			</block>
+			<block wx:else>
+				<view class='value {{value?"":"no-value"}}'>
+					<text class='text'>{{value||'请选择'}}</text>
+					<block wx:if='{{iconSlot}}'>
+						<slot></slot>
+					</block>
+					<block wx:else>
+						<image wx:if='{{!hideArrow}}' class='arrow' src="./images/arrow.png"></image>
+					</block>
+				</view>
+			</block>
+		</view>
+	</block>
+</view>

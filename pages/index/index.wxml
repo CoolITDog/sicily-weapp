@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<view class='layout'>
+  <view class='user-info'>
+    <image class='user-info-bg' src='/images/bg.jpg'></image>
+  </view>
+  <view class='menu-box'style="flex-direction:row; height: 100%;">
+    <!-- 菜单-->
+    <view class='group menu-left' style="height: 100%;width: 130rpx;">
+      <block wx:for='{{list}}' wx:key='*this' >
+        <view bindtap='chooseMenu' data-index='{{index}}' data-item='{{item}}' style="background:{{item.back==1?'#ffffff':'#e89abe'}}">
+          {{item.name}}
+        </view>
+      </block>
+    </view>
+    <!-- 详情 -->
+      <view  style="margin-top:20rpx;">
+      <block wx:for='{{goods[categoryId]}}' wx:key='*this'>
+         <view class="menu-left" >
+          <view class="quote-activity">
+            <image class="quote-inline" src="{{item.image}}"></image>
+            <view class="quote-content">
+              <view class="activity-info">
+                <view class="activity-name quote-inline">{{item.name}}</view>
+                <view class="activity-price quote-inline">{{item.price}}<text>￥</text></view>
+              </view>
+              <view class="acitvity-footer">
+                <view class="quote-inline" style="padding-right: 30rpx;">库存：{{item.todayRepository}}</view>
+                <view class="quote-inline" style="display: flex;  align-items: center;    position: relative; ">
+                  <image bindtap="delFood"  data-id="{{index}}" data-item="{{item}}" wx:if='{{item.buy > 0}}' src="../../images/del.png"></image>
+                  <text wx:if='{{item.buy > 0}}' >{{item.buy > 0?item.buy:""}}</text>
+                  <image bindtap="addFood" data-id="{{index}}" data-item="{{item}}" src="../../images/add.png"></image>
+                </view>
+              </view>
+            </view>
+          </view>
+          </view>
+        </block>
+      </view>
+        
+  </view>
+  
+</view>
+<!-- 购物车 -->
+<view class="add-wrap"hover-class="plus-hover">
+  <image src="../../images/shopCar.png" bindtap="toShopCar"></image>
+</view>
+

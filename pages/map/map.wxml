@@ -1,0 +1,18 @@
+<view class='layout'>
+  <view class="list clearfix">
+    <label class="pull-left" style=" width: 25%;">收货人</label>
+    <input class='input pull-left' type='input' data-target="name"  placeholder="收货人姓名" bindinput="input" value='{{name}}' style=" width: 75%;"></input>
+  </view>
+  <view class="list clearfix">
+    <label class="pull-left" style=" width: 25%;">联系电话</label>
+    <input class='input pull-left' type='input' data-target="phone" placeholder="联系电话" bindinput="input" value='{{phone}}' style=" width: 75%;"></input>
+  </view>
+  <view class="list clearfix">
+    <label class="pull-left" style=" width: 25%;">详细地址</label>
+    <input class='input pull-left' type='input' data-target="address"placeholder="详细地址" bindinput="input" value='{{address}}' style=" width: 75%;"></input>
+  </view>
+  <view style="height:20rpx;"></view>
+  <view class='tips'>说明：只配送5km范围内，特殊地点请直接联系卖家。</view>
+</view>
+
+<view class='btn {{flag?"":"disabled"}}' bindtap="done">确定</view>

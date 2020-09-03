@@ -1,0 +1,68 @@
+/* components/cell/cell.wxss */
+
+.cell-box {
+  padding-left: 40rpx;
+  background: #fff;
+}
+
+.cell {
+  min-height: 100rpx;
+  position: relative;
+  border-bottom: 2rpx solid #eee;
+  font-size: 28rpx;
+  color: #151515;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-right: 40rpx;
+}
+.cell.inputRight{
+  justify-content:space-between;
+}
+.cell.inputRight .input {
+  text-align: right;
+}
+.required::before{
+  content: '*';
+  color: red;
+  display: inline-block;
+}
+.value{
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.value .text{
+  display: inline-block;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  width: 90%;
+}
+.no-value{
+  color: #999;
+}
+
+.cell.cellInput .input {
+  text-align: right;
+  width: 70%;
+}
+.cell .input{
+  width: 75%;
+  text-align: left;
+}
+.cell.inputLeft .label{
+  width: 25%;
+}
+.cell .label.flex-start{
+  align-self: flex-start;
+  margin-top: 20rpx;
+}
+.arrow{
+  width: 28rpx;
+  height: 28rpx;
+  vertical-align: middle;
+  transform: translateY(2rpx);
+  margin-left:20rpx;
+}

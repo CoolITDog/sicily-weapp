@@ -1,0 +1,18 @@
+/* pages/common/login/login.wxss */
+.layout{
+  padding-top: 0;
+}
+.user-info {
+  width: 100%;
+  height: 346rpx;
+  position: relative;
+  border-radius: 20rpx;
+}
+
+.user-info-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}

@@ -1,0 +1,32 @@
+<view class='layout' wx:if='{{flag}}' style="padding-bottom:{{addressList.length > 0 ? '260rpx':'0'}};">
+	<block wx:if='{{addressList.length > 0}}'>
+		<block wx:for='{{addressList}}' wx:key='index'>
+			<view class='list clearfix'>
+				<view class='choose pull-left' bindtap="choose" data-index='{{index}}'>
+					<image wx:if='{{index==count}}' src="../../images/radio_active.png"></image>
+					<view wx:else class='arc'></view>
+				</view>
+				<view class='info pull-left' bindtap="choose" data-index='{{index}}'>
+					<view class='first '>
+						<view class='text-ellipsis'>{{item.provinceName|| ''}}{{item.cityName|| ''}}{{item.areaName || ''}}</view>
+					</view>
+					<view class='second text-ellipsis'>{{item.address||''}}</view>
+					<view class='last text-ellipsis'>{{item.name||''}}  {{item.phone||''}}</view>
+				</view>
+			</view>
+		</block>
+		
+		<view class='fixed-bottom'>
+			<view class='btn btn-red' bindtap="addOrEditAddress">添加</view>
+		</view>
+	</block>
+	<block wx:else>
+		<view class='box'>
+			<view class='nothing'>
+				<image src="../../resources/images/address_nothing.png"></image>
+				暂无地址
+			</view>
+			<view class='btn btn-red' bindtap="addOrEditAddress">添加</view>
+		</view>
+	</block>
+</view>

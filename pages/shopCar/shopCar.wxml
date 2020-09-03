@@ -1,0 +1,33 @@
+<!--pages/shopCar/shopCar.wxml-->
+<view style="padding-bottom: 55px;">
+  <view class='menu-box'style="flex-direction:row; height: 100%;">
+    <!-- 详情 -->
+      <view  style="margin-top:20rpx;">
+      <block wx:for='{{goods}}' wx:key='*this'>
+         <view class="menu-left" >
+          <view class="quote-activity">
+            <image class="quote-inline" src="{{item.image}}"></image>
+            <view class="quote-content">
+              <view class="activity-info">
+                <view class="activity-name quote-inline">{{item.name}}</view>
+                <view class="activity-price quote-inline">{{item.price}}<text>￥</text></view>
+              </view>
+              <view class="acitvity-footer">
+                <!-- <view class="quote-inline" style="padding-right: 30rpx;">库存：{{item.todayRepository}}</view> -->
+                <view class="quote-inline" style="display: flex;  align-items: center;    position: relative; ">
+                  <image bindtap="delFood"  data-id="{{index}}" data-item="{{item}}" wx:if='{{item.buy > 0}}' src="../../images/del.png"></image>
+                  <text wx:if='{{item.buy > 0}}' >{{item.buy > 0?item.buy:""}}</text>
+                  <image bindtap="addFood" data-id="{{index}}" data-item="{{item}}" src="../../images/add.png"></image>
+                </view>
+              </view>
+            </view>
+          </view>
+          </view>
+        </block>
+      </view>
+  </view>
+</view>
+<view class="orderBtn">
+  <view bindtap="generateOrder"class="rushBuy pull-right"> 去结算
+  </view>
+</view>

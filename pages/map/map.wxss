@@ -1,0 +1,47 @@
+
+/* components/cell/cell.wxss */
+.layout{
+  padding: 20rpx;
+}
+.list{
+  background: #fff;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100rpx;
+  padding: 30rpx 0;
+  border-bottom: 1px solid gainsboro; 
+}
+.pull-left {
+  float: left;
+}
+.tips {
+  padding: 40rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60rpx auto 0;
+  width: 670rpx;
+  height: 94rpx;
+  color: #fff;
+  border-radius: 8rpx;
+  background:  #1979F1;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.del {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 40rpx;
+  text-align: center;
+  color: #3399ff;
+  font-size: 24rpx;
+}
+

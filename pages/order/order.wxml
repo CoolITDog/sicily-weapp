@@ -1,0 +1,2 @@
+<!--pages/order/order.wxml-->
+<button bindtap="genrateOrder">下单</button>
