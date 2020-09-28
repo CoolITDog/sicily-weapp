@@ -3,9 +3,13 @@
   <view class='menu-box'style="flex-direction:row; height: 100%;">
     <!-- 详情 -->
       <view  style="margin-top:20rpx;">
-      <block wx:for='{{goods}}' wx:key='*this'>
+      <!-- <view style="padding: 40rpx;"><radio-group bindchange="selectAll"><radio value="all" />全选</radio-group></view> -->
+      <checkbox-group bindchange='selectOne'>
+      
+        <block wx:for='{{goods}}' wx:key='*this'>
          <view class="menu-left" >
           <view class="quote-activity">
+            <checkbox checked="true" value="{{item.id}}"/>
             <image class="quote-inline" src="{{item.image}}"></image>
             <view class="quote-content">
               <view class="activity-info">
@@ -21,13 +25,15 @@
                 </view>
               </view>
             </view>
-          </view>
+            </view>
           </view>
         </block>
+      </checkbox-group>
       </view>
   </view>
+  <view style="padding-right: 40rpx;text-align: right;">合计：￥{{totalPrice}}</view>
 </view>
 <view class="orderBtn">
-  <view bindtap="generateOrder"class="rushBuy pull-right"> 去结算
+  <view bindtap="generateOrder" class="rushBuy pull-right">去下单
   </view>
 </view>

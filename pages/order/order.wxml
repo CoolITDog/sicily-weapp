@@ -1,2 +1,36 @@
 <!--pages/order/order.wxml-->
-<button bindtap="genrateOrder">下单</button>
+<!-- <button bindtap="pay">支付</button> -->
+<view style="padding-bottom:100rpx;">
+  <view class='paidTips'>
+     <radio-group bindchange="radioChange">
+        <label>
+            <radio value="ziti" />自提
+        </label>
+        <label>
+            <radio value="waisong" />外送
+        </label>
+    </radio-group>
+  </view>
+  <view></view>
+  <view class='order-title'>商品信息</view>
+  
+  <block wx:for='{{foodList}}' wx:key='*this'>
+    <view class="menu-left" >
+      <view class="quote-activity">
+        <view class="quote-content">
+          <view class="activity-info">
+            <view class="activity-name quote-inline">{{item.foodName}}</view>
+            <view class="activity-price quote-inline">{{item.price}}<text>￥</text></view>
+          </view>
+          <view class="activity-amount">×{{item.amount}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  
+</view>
+<view></view>
+<view class='orderBtn'>
+	<view class='orderCancel' bindtap='orderCancel'>取消订单</view>
+	<view class='rushBuy' bindtap='toPay'>立即支付：  ￥{{orderInfo.price}}</view>
+</view>

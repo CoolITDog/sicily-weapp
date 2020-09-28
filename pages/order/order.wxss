@@ -1,1 +1,143 @@
-/* pages/order/order.wxss */
+.paidTips {
+  background-image: linear-gradient(90deg, #ff8f03 2%, #ff9e21 100%);
+  width: 100%;
+  position: relative;
+  color: #fff;
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+.orderBtn {
+  background: #fff;
+  box-shadow: 0 0 2px 0 #ccc;
+  height: 100rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.orderBtn .orderCancel {
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+  display: inline-block;
+  width: 200rpx;
+  height: 100%;
+  vertical-align: middle;
+  padding: 30rpx 0;
+  box-sizing: border-box;
+}
+
+.orderBtn .rushBuy {
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  width: 551rpx;
+  background: #f60;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  padding: 28rpx 0;
+  box-sizing: border-box;
+}
+.order-title {
+  font-size: 28rpx;
+  color: #333;
+  padding-left: 40rpx;
+  padding-top: 40rpx;
+}
+
+
+/* .radio-group label {
+    height: 86rpx;
+    line-height: 86rpx;
+    font-size: 32rpx;
+    border-bottom: 1rpx solid #e2e2e2;
+    box-sizing: border-box;
+    padding: 0 20rpx;
+}
+
+radio {
+    width: 38rpx;
+} */
+
+/* 单选框未选中 */
+/* radio .wx-radio-input {
+    width: 24rpx;
+    height: 24rpx;
+    border-radius: 50%;
+} */
+
+
+/* 单选框选中后对勾样式 */
+/* radio .wx-radio-input.wx-radio-input-checked::before{
+    border-radius: 50%;
+    width: 44rpx;
+    height: 44rpx;
+    line-height: 44rpx;
+    text-align: center;
+    font-size: 26rpx;   
+    color:#fff;
+    background-color: #da2728;
+    border-color: #da2728;
+} */
+
+.quote-activity {
+  position: relative;
+  display: inline-flex;
+  padding: 40rpx;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+.quote-activity image {
+  width: 30%;
+  height: 200rpx;
+  position: relative;
+  border-radius: 20rpx;
+}
+.quote-activity .quote-content {
+  /* flex: 1; */
+  width: 100%;
+  /* width: calc(100% - 220rpx); */
+}
+.quote-activity .quote-content .activity-info {
+  display: flex;
+  justify-content: space-between;
+}
+.quote-activity .quote-content .activity-name {
+  padding: 20rpx 18rpx 0rpx;
+  height: 104rpx;
+  font-size: 32rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.quote-activity .quote-content .activity-price {
+  padding-top: 20rpx;
+  font-size: 44rpx;
+  color: #FF7D12;
+}
+.quote-activity .quote-content .activity-price text {
+  font-size: 32rpx;
+  justify-content: end;
+}
+.activity-amount{
+  text-align: right;
+  font-size: 24rpx;
+}
+
+.quote-activity .acitvity-footer {
+  font-size: 30rpx;
+  color: #999999;
+  letter-spacing: 0;
+  padding: 12rpx 18rpx;
+  /* border-bottom: 1px dashed #E3E3E3; */
+  display: flex;
+}
+.quote-activity .acitvity-footer image{
+  width: 40rpx;
+  height: 40rpx;
+  /* padding: 5rpx 0rpx 0rpx 70rpx; */
+}

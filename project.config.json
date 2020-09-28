@@ -64,10 +64,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 1,
 					"name": "下单",
 					"pathName": "pages/order/order",
-					"query": "",
+					"query": "id=6",
 					"scene": null
 				},
 				{

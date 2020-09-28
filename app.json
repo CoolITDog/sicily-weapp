@@ -7,12 +7,13 @@
     "pages/order/order",
     "pages/common/login/login",
     "pages/address/address",
-    "pages/map/map"
+    "pages/map/map",
+    "pages/paySuccess/paySuccess"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "西西里",
+    "navigationBarTitleText": "Wechat",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
